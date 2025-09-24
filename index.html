@@ -44,6 +44,12 @@
     .img-wrap .ph{display:grid;place-items:center;height:100%;color:var(--muted)}
     .note{font-size:12px;color:var(--muted)}
     @media (max-width:900px){.hero{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}}
+      .form-card{padding:0; overflow:hidden}
+    .form-card iframe{display:block; width:100%; border:0}
+    :root{ --gform-h-desktop: 1200px; --gform-h-mobile: 1500px }
+    @media (max-width:900px){
+      .gform-frame{height:var(--gform-h-mobile) !important}
+    }
   </style>
 </head>
 <body>
@@ -171,9 +177,9 @@
           <p class="note">Don’t have a form yet? Create a free <strong>Google Form</strong>, then replace the embed URL below. (Google Forms → Send → &lt;&gt; Embed → copy the URL.)</p>
           <p class="muted">Prefer email? <a href="mailto:Ryleesbake@gmail.com">Ryleesbake@gmail.com</a></p>
         </div>
-        <div class="card">
+        <div class="card form-card">
           <!-- GOOGLE FORMS EMBED (replace the src with your form's embed URL) -->
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYBBfUP6SKK-DPc8k233DRJyjPu90RRjPOQ7ujXxhpwyw9_A/viewform?embedded=true" width="640" height="990" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          <iframe class="gform-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSfYBBfUP6SKK-DPc8k233DRJyjPu90RRjPOQ7ujXxhpwyw9_A/viewform?embedded=true" height="1200" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
       </div>
     </section>
@@ -206,8 +212,3 @@
           </div>
         </div>`).join('');
     }
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
