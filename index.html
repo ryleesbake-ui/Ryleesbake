@@ -9,9 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#faf7f2; --ink:#1f2937; --muted:#6b7280; --accent:#8b5e34; --accent-2:#c59b76; --card:#fff; --ring:#e7e0d7;
-    }
+    :root{ --bg:#faf7f2; --ink:#1f2937; --muted:#6b7280; --accent:#8b5e34; --accent-2:#c59b76; --card:#fff; --ring:#e7e0d7; }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
     a{color:var(--accent);text-decoration:none}
@@ -20,7 +18,8 @@
     header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px);background:color-mix(in oklab, var(--bg) 90%, white);border-bottom:1px solid var(--ring);z-index:20}
     .nav{display:flex;align-items:center;gap:16px;justify-content:space-between;padding:14px 24px}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:40px;height:40px;border-radius:10px;background:conic-gradient(from 0.25turn, var(--accent), var(--accent-2));box-shadow:0 6px 20px rgba(0,0,0,.05)}
+    .logo-box{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:conic-gradient(from 0.25turn, var(--accent), var(--accent-2));box-shadow:0 6px 20px rgba(0,0,0,.05);overflow:hidden}
+    .logo-img{width:40px;height:40px;object-fit:cover;border-radius:10px;border:1px solid var(--ring)}
     .brand h1{font-family:"Playfair Display",serif;font-size:20px;margin:0}
     .cta{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:white;border:none;border-radius:999px;padding:10px 16px;font-weight:700;box-shadow:0 8px 20px rgba(139,94,52,.25);}
     .cta:hover{filter:brightness(1.05)}
@@ -41,6 +40,7 @@
     .muted{color:var(--muted)}
     .footer{padding:40px 24px;border-top:1px solid var(--ring);text-align:center;color:var(--muted)}
     .img-wrap{aspect-ratio:4/3;border-radius:16px;overflow:hidden;border:1px solid var(--ring);background:linear-gradient(135deg, #f2ebe2, #fff)}
+    .img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
     .img-wrap .ph{display:grid;place-items:center;height:100%;color:var(--muted)}
     .note{font-size:12px;color:var(--muted)}
     @media (max-width:900px){.hero{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}}
@@ -49,7 +49,13 @@
 <body>
   <header>
     <div class="nav container">
-      <div class="brand"><div class="logo" aria-hidden="true"></div><h1>Rylee's Bake</h1></div>
+      <div class="brand">
+        <!-- Replace src with your logo file path (e.g., assets/logo.png). If no image yet, gradient box shows. -->
+        <div class="logo-box">
+          <img src="assets/logo.png" alt="Rylee's Bake logo" class="logo-img" onerror="this.style.display='none'">
+        </div>
+        <h1>Rylee's Bake</h1>
+      </div>
       <a class="cta" href="#book">Book a Class</a>
     </div>
   </header>
@@ -67,7 +73,8 @@
         </div>
       </div>
       <div class="img-wrap card">
-        <div class="ph">(Add a hero photo of a crusty loaf / hands-on workshop)</div>
+        <!-- Replace with assets/hero.jpg after upload -->
+        <img src="assets/hero.jpg" alt="Sourdough class in action" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',innerText:'(Add a hero photo in assets/hero.jpg)'}))">
       </div>
     </section>
 
@@ -78,20 +85,17 @@
         <div class="card">
           <div class="badge">1</div>
           <h4>Live Teaching</h4>
-          <p class="muted">Step-by-step method: feeding, bulk, shaping, scoring, baking. Q&A throughout.
-          </p>
+          <p class="muted">Step-by-step method: feeding, bulk, shaping, scoring, baking. Q&A throughout.</p>
         </div>
         <div class="card">
           <div class="badge">2</div>
           <h4>Starter & Kit</h4>
-          <p class="muted">Active starter + basic tools to get baking tonight (bowl scraper, lame/razor, proofing guide).
-          </p>
+          <p class="muted">Active starter + basic tools to get baking tonight (bowl scraper, lame/razor, proofing guide).</p>
         </div>
         <div class="card">
           <div class="badge">3</div>
           <h4>Printables</h4>
-          <p class="muted">Beautifully designed recipe cards, maintenance schedule, and troubleshooting flowchart.
-          </p>
+          <p class="muted">Beautifully designed recipe cards, maintenance schedule, and troubleshooting flowchart.</p>
         </div>
       </div>
     </section>
@@ -103,38 +107,35 @@
         <div class="card">
           <h4>Hands-On Sourdough 101</h4>
           <p class="muted">2.5 hours • beginner friendly • includes starter & kit</p>
-          <div class="price">$<span id="price-101">65</span><span class="muted" style="font-size:16px">/person</span></div>
+          <div class="price">$<span id="price-101">100</span><span class="muted" style="font-size:16px">/person</span></div>
           <ul class="list muted">
             <li>✔️ All equipment provided</li>
             <li>✔️ Take-home starter + resources</li>
-            <li>✔️ Small class size (max 10)</li>
+            <li>✔️ Class size: <strong>3–6 people</strong></li>
           </ul>
           <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
             <a class="cta" href="#upcoming">View Upcoming Dates</a>
             <a class="cta" href="#host">Book a Private Group</a>
           </div>
-          <p class="note" style="margin-top:12px">Have dietary needs? We’ll guide gluten-sensitive options.</p>
         </div>
         <div class="card">
-          <h4>Private / Apartment-Complex Event</h4>
-          <p class="muted">Perfect for community spaces, church groups, and team offsites.</p>
-          <div class="price">$<span id="price-private">350</span><span class="muted" style="font-size:16px">+ materials</span></div>
+          <h4>Private Event</h4>
+          <p class="muted">Perfect for apartment communities, church groups, and team offsites.</p>
+          <div class="price">$200 <span class="muted" style="font-size:16px">base</span> + $75<span class="muted" style="font-size:16px">/person</span></div>
           <ul class="list muted">
-            <li>✔️ Up to 12 people (more by request)</li>
+            <li>✔️ Includes bake-at-home kits</li>
+            <li>✔️ Group size: <strong>3–8 people</strong> (more by request)</li>
             <li>✔️ We bring all gear & supplies</li>
-            <li>✔️ Optional add-on: bake-at-home kits</li>
           </ul>
           <a class="cta" href="#host">Request to Host</a>
         </div>
       </div>
     </section>
 
-    <!-- UPCOMING EVENTS (edit inline) -->
+    <!-- UPCOMING EVENTS -->
     <section id="upcoming" class="section">
       <h3>Upcoming Dates</h3>
       <div id="events" class="grid grid-3"></div>
-      <p class="note">Tip: you can replace this list with an embedded Google Calendar or Eventbrite widget.
-      </p>
     </section>
 
     <!-- TESTIMONIALS / SOCIAL PROOF -->
@@ -143,21 +144,22 @@
       <p class="muted">Testimonials coming soon! Check back after our first classes.</p>
     </section>
 
-    <!-- HOST A CLASS (embed a free form) -->
+    <!-- HOST A CLASS -->
     <section id="host" class="section">
       <h3>Host a Class</h3>
       <div class="grid grid-2">
         <div class="card">
           <p class="muted">Have a community room, apartment clubhouse, or church kitchen? We’ll come to you. Tell us about your space and ideal date and we’ll reply within 24 hours.</p>
           <ul class="list muted">
-            <li>• Min footprint: 2 tables + outlets</li>
-            <li>• We bring burners, Dutch ovens, tools</li>
+            <li>• No oven required</li>
             <li>• Travel up to 60 miles from Clermont, Winter Garden, Windermere, The Villages, Groveland, Mascotte, Ocoee and more!</li>
           </ul>
         </div>
         <div class="card">
-          <iframe data-tally-src="https://tally.so/r/your-form-id" width="100%" height="420" frameborder="0" marginheight="0" marginwidth="0" title="Host a Class"></iframe>
-          <script>var d=document,w="https://tally.so/widgets/embed.js";if(!d.querySelector('script[src="'+w+'"]')){var s=d.createElement("script");s.src=w;s.async=1;d.body.appendChild(s);} </script>
+          <div class="img-wrap">
+            <!-- Replace with assets/host.jpg after upload -->
+            <img src="assets/host.jpg" alt="Private sourdough class" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',innerText:'(Add a photo in assets/host.jpg)'}))">
+          </div>
         </div>
       </div>
     </section>
@@ -180,28 +182,30 @@
   </footer>
 
   <script>
-    const events = [
-      {date:"Oct 12, 2025", time:"2:00–4:30 PM", where:"Groveland Community Center", type:"Sourdough 101", price:"$65", url:"#"},
-      {date:"Oct 26, 2025", time:"6:00–8:30 PM", where:"Local Roastery Kitchen", type:"Sourdough 101", price:"$65", url:"#"},
-      {date:"Nov 9, 2025", time:"2:00–4:30 PM", where:"Church Hall", type:"Holiday Loaves", price:"$75", url:"#"}
-    ];
+    // Upcoming events: show TBA only (edit later when you have real dates)
+    const events = [];
     const wrap = document.getElementById('events');
-    wrap.innerHTML = events.map(e => `
-      <div class="card">
-        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
-          <div>
-            <strong>${e.type}</strong>
-            <div class="muted">${e.date} • ${e.time}</div>
-            <div class="muted">${e.where}</div>
+    if(events.length === 0){
+      wrap.innerHTML = `<div class="card"><strong>To Be Announced</strong><div class="muted">Join the email list or check back soon.</div></div>`;
+    } else {
+      wrap.innerHTML = events.map(e => `
+        <div class="card">
+          <div style=\"display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap\">
+            <div>
+              <strong>${e.type}</strong>
+              <div class=\"muted\">${e.date} • ${e.time}</div>
+              <div class=\"muted\">${e.where}</div>
+            </div>
+            <div style=\"text-align:right\">
+              <div class=\"price\" style=\"font-size:28px\">${e.price}</div>
+              <a class=\"cta\" href=\"${e.url}\">Reserve</a>
+            </div>
           </div>
-          <div style="text-align:right">
-            <div class="price" style="font-size:28px">${e.price}</div>
-            <a class="cta" href="${e.url}">Reserve</a>
-          </div>
-        </div>
-      </div>`).join('');
+        </div>`).join('');
+    }
 
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+
