@@ -50,13 +50,12 @@
   <header>
     <div class="nav container">
       <div class="brand">
-        <!-- Replace src with your logo file path (e.g., assets/logo.png). If no image yet, gradient box shows. -->
         <div class="logo-box">
           <img src="assets/logo.png" alt="Rylee's Bake logo" class="logo-img" onerror="this.style.display='none'">
         </div>
         <h1>Rylee's Bake</h1>
       </div>
-      <a class="cta" href="#book">Book a Class</a>
+      <a class="cta" href="#contact">Book a Class</a>
     </div>
   </header>
 
@@ -69,11 +68,10 @@
         <p>Small-group classes where you leave with an active starter, step-by-step printables, and confidence to bake at home. We bring all the gear — you bring your curiosity.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
           <a class="cta" href="#book">See Dates & Pricing</a>
-          <a class="cta" style="background:#1f2937" href="#host">Host a Class</a>
+          <a class="cta" style="background:#1f2937" href="#contact">Host a Class</a>
         </div>
       </div>
       <div class="img-wrap card">
-        <!-- Replace with assets/hero.jpg after upload -->
         <img src="assets/hero.jpg" alt="Sourdough class in action" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',innerText:'(Add a hero photo in assets/hero.jpg)'}))">
       </div>
     </section>
@@ -115,7 +113,7 @@
           </ul>
           <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
             <a class="cta" href="#upcoming">View Upcoming Dates</a>
-            <a class="cta" href="#host">Book a Private Group</a>
+            <a class="cta" href="#contact">Book a Private Group</a>
           </div>
         </div>
         <div class="card">
@@ -127,7 +125,7 @@
             <li>✔️ Group size: <strong>3–8 people</strong> (more by request)</li>
             <li>✔️ We bring all gear & supplies</li>
           </ul>
-          <a class="cta" href="#host">Request to Host</a>
+          <a class="cta" href="#contact">Request to Host</a>
         </div>
       </div>
     </section>
@@ -154,24 +152,29 @@
             <li>• No oven required</li>
             <li>• Travel up to 60 miles from Clermont, Winter Garden, Windermere, The Villages, Groveland, Mascotte, Ocoee and more!</li>
           </ul>
+          <a class="cta" href="#contact">Contact Us</a>
         </div>
         <div class="card">
           <div class="img-wrap">
-            <!-- Replace with assets/host.jpg after upload -->
             <img src="assets/host.jpg" alt="Private sourdough class" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',innerText:'(Add a photo in assets/host.jpg)'}))">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT / FOOTER CTA -->
-    <section class="section">
-      <div class="card" style="display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap">
-        <div>
-          <h4>Questions? Want a custom workshop?</h4>
-          <p class="muted">Email <a href="mailto:Ryleesbake@gmail.com">Ryleesbake@gmail.com</a></p>
+    <!-- CONTACT / BOOK FORM -->
+    <section id="contact" class="section">
+      <h3>Contact / Book a Class</h3>
+      <div class="grid grid-2">
+        <div class="card">
+          <p class="muted">Use the form to ask about upcoming dates or to plan a private event. We’ll reply within 24 hours.</p>
+          <p class="note">Don’t have a form yet? Create a free <strong>Google Form</strong>, then replace the embed URL below. (Google Forms → Send → &lt;&gt; Embed → copy the URL.)</p>
+          <p class="muted">Prefer email? <a href="mailto:Ryleesbake@gmail.com">Ryleesbake@gmail.com</a></p>
         </div>
-        <a class="cta" href="#host">Request to Host</a>
+        <div class="card">
+          <!-- GOOGLE FORMS EMBED (replace the src with your form's embed URL) -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYBBfUP6SKK-DPc8k233DRJyjPu90RRjPOQ7ujXxhpwyw9_A/viewform?embedded=true" width="640" height="990" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
       </div>
     </section>
 
