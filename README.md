@@ -205,9 +205,9 @@
               <div class=\"muted\">${e.where}</div>
             </div>
             <div style=\"text-align:right\">
-              <div class=\"price\" style=\"font-size:28px\">${e.price}</div>
-              <a class=\"cta\" href=\"${e.url}\">Reserve</a>
-            </div>
+             <div class="price" style="font-size:28px">
+  ${e.price}
+</div>
           </div>
         </div>`).join('');
     }
