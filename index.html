@@ -1,263 +1,372 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sourdough Starter Classes | Rylee's Bake</title>
-  <meta name="description" content="Hands-on sourdough classes with all the gear, printables, and a step-by-step method. Learn to bake crusty loaves at home and host a class at your venue." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{ --bg:#faf7f2; --ink:#1f2937; --muted:#6b7280; --accent:#8b5e34; --accent-2:#c59b76; --card:#fff; --ring:#e7e0d7; }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1080px;margin:0 auto;padding:24px}
-    header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px);background:color-mix(in oklab, var(--bg) 90%, white);border-bottom:1px solid var(--ring);z-index:20}
-    .nav{display:flex;align-items:center;gap:16px;justify-content:space-between;padding:14px 24px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo-box{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:conic-gradient(from 0.25turn, var(--accent), var(--accent-2));box-shadow:0 6px 20px rgba(0,0,0,.05);overflow:hidden}
-    .logo-img{width:40px;height:40px;object-fit:cover;border-radius:10px;border:1px solid var(--ring)}
-    .brand h1{font-family:"Playfair Display",serif;font-size:20px;margin:0}
-    .cta{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:white;border:none;border-radius:999px;padding:10px 16px;font-weight:700;box-shadow:0 8px 20px rgba(139,94,52,.25);}
-    .cta:hover{filter:brightness(1.05)}
-    .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center;padding:48px 24px}
-    .hero h2{font-family:"Playfair Display",serif;font-size:clamp(36px,5vw,56px);line-height:1.05;margin:0 0 8px}
-    .hero p{font-size:18px;color:var(--muted);margin:0 0 16px}
-    .pill{display:inline-block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:#f5ede4;border:1px solid var(--ring);padding:8px 12px;border-radius:999px}
-    .card{background:var(--card);border:1px solid var(--ring);border-radius:16px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.05)}
-    .grid{display:grid;gap:16px}
-    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .list{display:grid;gap:10px;margin:0;padding:0}
-    .list li{list-style:none;display:flex;gap:10px}
-    .badge{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:7px;background:var(--accent);color:white;font-weight:700}
-    .section{padding:24px}
-    .section h3{font-family:"Playfair Display",serif;font-size:28px;margin:0 0 12px}
-    .price{font-size:40px;font-weight:800}
-    .muted{color:var(--muted)}
-    .footer{padding:40px 24px;border-top:1px solid var(--ring);text-align:center;color:var(--muted)}
-    .img-wrap{aspect-ratio:4/3;border-radius:16px;overflow:hidden;border:1px solid var(--ring);background:linear-gradient(135deg, #f2ebe2, #fff)}
-    .img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
-    .img-wrap .ph{display:grid;place-items:center;height:100%;color:var(--muted)}
-    .note{font-size:12px;color:var(--muted)}
-    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}}
-      .form-card{padding:0; overflow:hidden}
-    .form-card iframe{display:block; width:100%; border:0}
-    :root{ --gform-h-desktop: 1200px; --gform-h-mobile: 1500px }
-    @media (max-width:900px){
-      .gform-frame{height:var(--gform-h-mobile) !important}
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sourdough Classes in Clermont, FL | Rylee's Bake</title>
+  <meta name="description" content="Small, hands-on sourdough classes in Clermont, FL. Learn the fundamentals in Sourdough 101 or bake with discard in Sourdough 201. Take home your own dough, starter and recipes.">
+  <meta name="theme-color" content="#f6f1eb">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Rylee's Bake">
+  <meta property="og:title" content="Sourdough Classes in Clermont, FL | Rylee's Bake">
+  <meta property="og:description" content="Small, hands-on sourdough classes. Take home your own dough, starter and recipes.">
+  <meta property="og:image" content="https://ryleesbake-ui.github.io/Ryleesbake/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A crusty scored sourdough loaf next to the Rylee's Bake logo">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Rylee's Bake",
+    "description": "Hands-on sourdough bread classes in Clermont, Florida.",
+    "image": "https://ryleesbake-ui.github.io/Ryleesbake/og-image.jpg",
+    "logo": "https://ryleesbake-ui.github.io/Ryleesbake/assets/img/logo-400.png",
+    "email": "ryleesbake@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Clermont", "addressRegion": "FL", "postalCode": "34715", "addressCountry": "US" },
+    "areaServed": ["Clermont", "Winter Garden", "Windermere", "Ocoee", "Groveland", "Mascotte", "Minneola", "The Villages"],
+    "sameAs": ["https://www.facebook.com/profile.php?id=61573125724592"]
+  }
+  </script>
 </head>
 <body>
-  <header>
-    <div class="nav container">
-      <div class="brand">
-        <div class="logo-box">
-          <img src="assets/logo.png" alt="Rylee's Bake logo" class="logo-img" onerror="this.style.display='none'">
-        </div>
-        <h1>Rylee's Bake</h1>
-      </div>
-      <a class="cta" href="#contact">Book a Class</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="Rylee's Bake, home">
+        <img src="assets/img/logo-192.png" width="58" height="58" alt="">
+        <span>Rylee's Bake</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <ul id="site-menu">
+          <li><a href="#classes">Class dates</a></li>
+          <li><a href="#which-class">101 &amp; 201</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#private">Private classes</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a class="btn btn--small" href="#classes">Book a class</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Menu">
+          <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </nav>
     </div>
   </header>
 
-  <main class="container">
-    <!-- HERO -->
+  <main id="main">
+
+    <!-- Hero -->
     <section class="hero">
-      <div>
-        <span class="pill">Hands-on • Beginner-friendly • Everything included</span>
-        <h2>Learn to Bake Incredible Sourdough in One Class</h2>
-        <p>Small-group classes where you leave with an active starter, step-by-step printables, and confidence to bake at home. We bring all the gear — you bring your curiosity.</p>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
-          <a class="cta" href="#book">See Dates & Pricing</a>
-          <a class="cta" style="background:#1f2937" href="#contact">Host a Class</a>
-        </div>
-      </div>
-      <div class="img-wrap card">
-        <img src="assets/hero.jpg" alt="Sourdough class in action" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',innerText:'(Add a hero photo in assets/hero.jpg)'}))">
-      </div>
-    </section>
-
-    <!-- WHAT YOU'LL GET -->
-    <section class="section">
-      <h3>What You’ll Get</h3>
-      <div class="grid grid-3">
-        <div class="card">
-          <div class="badge">1</div>
-          <h4>Live Teaching</h4>
-          <p class="muted">Step-by-step method: feeding, bulk, shaping, scoring, baking. Q&A throughout.</p>
-        </div>
-        <div class="card">
-          <div class="badge">2</div>
-          <h4>Starter & Kit</h4>
-          <p class="muted">Fresh sourdough starter + basic tools to get baking (proofing set, mixing bowl, rice flour, and recipes to start baking).</p>
-        </div>
-        <div class="card">
-          <div class="badge">3</div>
-          <h4>Printables</h4>
-          <p class="muted">Beautifully designed recipe cards, maintenance schedule, and troubleshooting flowchart.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRICING -->
-    <section id="book" class="section">
-      <h3>Classes & Pricing</h3>
-      <div class="grid grid-2">
-        <div class="card">
-          <h4>Hands-On Sourdough 101</h4>
-          <p class="muted">2.5 hours • beginner friendly • includes starter & kit</p>
-          <div class="price">$<span id="price-101">100</span><span class="muted" style="font-size:16px">/person</span></div>
-          <ul class="list muted">
-            <li>✔️ All equipment provided</li>
-            <li>✔️ Take-home starter + resources</li>
-            <li>✔️ Class size: <strong>3–6 people</strong></li>
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">Hands-on sourdough classes · Clermont, FL</p>
+          <h1>Good bread takes time. <em>Learning it doesn't have to.</em></h1>
+          <p class="lede">Small, relaxed classes where your hands are in the dough from the start. Learn the fundamentals in Sourdough 101, then get more out of your starter in Sourdough 201.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#classes">See class dates</a>
+            <a class="btn btn--ghost" href="#which-class">Which class is right for me?</a>
+          </div>
+          <a class="next-class" id="next-class" href="#classes" hidden>
+            <span class="dot" aria-hidden="true"></span><span data-next-text></span>
+          </a>
+          <ul class="facts">
+            <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Small groups</li>
+            <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sourdough appetizers included</li>
+            <li><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Take-home dough &amp; recipes</li>
           </ul>
-          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
-            <a class="cta" href="#upcoming">View Upcoming Dates</a>
-            <a class="cta" href="#contact">Book a Private Group</a>
+        </div>
+        <div class="hero-photo">
+          <img src="assets/img/hero-loaf-1000.webp"
+               srcset="assets/img/hero-loaf-640.webp 640w, assets/img/hero-loaf-1000.webp 1000w, assets/img/hero-loaf-1400.webp 1400w"
+               sizes="(max-width: 860px) 92vw, 40vw"
+               width="1000" height="1250" fetchpriority="high"
+               alt="A golden, deeply scored sourdough loaf held up outdoors">
+          <img class="stamp" src="assets/img/logo-192.png" width="128" height="128" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming dates (rendered from assets/js/classes.js) -->
+    <section class="section band" id="classes" aria-labelledby="classes-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Upcoming classes</p>
+            <h2 id="classes-title">Save your spot</h2>
+          </div>
+          <p class="lede">Classes are small so everyone gets hands-on help. When a date fills, it's full.</p>
+        </div>
+        <div class="class-list" id="class-list" aria-live="polite">
+          <noscript>
+            <div class="empty-state">
+              <h3>See dates on Facebook</h3>
+              <p>Class dates load with JavaScript. You can also find them on <a href="https://www.facebook.com/profile.php?id=61573125724592">Rylee's Bake on Facebook</a> or email <a href="mailto:ryleesbake@gmail.com">ryleesbake@gmail.com</a>.</p>
+            </div>
+          </noscript>
+        </div>
+        <p class="secure-note">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Secure checkout through Square. You'll land on a confirmation page with the address and class details.
+        </p>
+      </div>
+    </section>
+
+    <!-- The two classes -->
+    <section class="section" id="which-class" aria-labelledby="which-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Two classes</p>
+            <h2 id="which-title">Start with 101. Keep going with 201.</h2>
+          </div>
+          <p class="lede">New to sourdough? Begin with the fundamentals. Already keeping a starter? Jump into 201 and put your discard to work.</p>
+        </div>
+
+        <div class="offerings">
+          <article class="offering">
+            <img src="assets/img/class-101-setup-800.webp" width="800" height="450" loading="lazy"
+                 alt="The kitchen island set for Sourdough 101, with a bowl, starter jar, towel, spoon and guide at every seat">
+            <div class="offering__body">
+              <div class="offering__head">
+                <span class="tag">Sourdough 101</span>
+                <p class="price">$90<small>per person</small></p>
+              </div>
+              <h3>Sourdough Fundamentals</h3>
+              <p class="who">For complete beginners. No experience needed.</p>
+              <p>We'll walk through the fundamentals together, from caring for your starter to mixing, shaping and baking a beautiful, crusty loaf. It's fully hands-on and built to give you the confidence to bake at home.</p>
+              <h4>What you'll learn and take home</h4>
+              <ul class="ticks">
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>How to maintain and feed a sourdough starter</li>
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Proper mixing, shaping and baking techniques</li>
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Your own dough to bake later at home</li>
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A portion of my sourdough starter to keep baking</li>
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A starter kit with everything you need to keep going</li>
+              </ul>
+              <div class="offering__foot">
+                <p class="note"><strong>Bring:</strong> just yourself. You'll need a Dutch oven at home to bake your loaf.</p>
+                <a class="btn btn--small" href="#classes">See 101 dates</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="offering">
+            <img src="assets/img/class-spread-800.webp" width="800" height="533" loading="lazy"
+                 alt="A spread of sourdough loaves and appetizers set out for class">
+            <div class="offering__body">
+              <div class="offering__head">
+                <span class="tag">Sourdough 201</span>
+                <p class="price">$80<small>per person</small></p>
+              </div>
+              <h3>Discard Recipes &amp; Everyday Baking</h3>
+              <p class="who">For 101 grads, or anyone who already feeds and keeps a starter.</p>
+              <p>Go beyond the classic loaf. Together we'll make individual sourdough cinnamon rolls and mix a sourdough pizza dough for you to bake for dinner, then taste a variety of discard appetizers.</p>
+              <h4>What you'll learn and take home</h4>
+              <ul class="ticks">
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>How to use discard in sweet and savory recipes</li>
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Individual sourdough cinnamon rolls made in class</li>
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sourdough pizza dough to bake later at home</li>
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A tasting of sourdough discard appetizers</li>
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A recipe bundle full of discard-friendly ideas</li>
+                <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>More confidence using your starter between loaf days</li>
+              </ul>
+              <div class="offering__foot">
+                <p class="note"><strong>Bring:</strong> your 101 kit and starter, or your own equivalent setup.</p>
+                <a class="btn btn--small" href="#classes">See 201 dates</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 101 kit -->
+    <section class="section band" id="kit" aria-labelledby="kit-title">
+      <div class="wrap kit">
+        <div class="kit-photo">
+          <img src="assets/img/kit-place-setting-1000.webp"
+               srcset="assets/img/kit-place-setting-640.webp 640w, assets/img/kit-place-setting-1000.webp 1000w"
+               sizes="(max-width: 860px) 92vw, 45vw" width="1000" height="1250" loading="lazy"
+               alt="A class place setting: mixing bowl with starter, spoon, tea towel and the Sourdough Foundations guide">
+        </div>
+        <div>
+          <p class="eyebrow">Sourdough 101 starter kit</p>
+          <h2 id="kit-title">Everything you need to keep baking at home</h2>
+          <ul class="kit-list">
+            <li>
+              <span class="icon"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8"/><path d="M9 2v3a4 4 0 0 1-2 3.5V20a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V8.5A4 4 0 0 1 15 5V2"/><path d="M7 14h10"/></svg></span>
+              <div><strong>A portion of Rylee's starter</strong><span>Active and fed, so you can bake right away.</span></div>
+            </li>
+            <li>
+              <span class="icon"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18"/><path d="M4 11a8 8 0 0 0 16 0"/><path d="M9 7c0-1.5 1.5-2.5 3-2.5S15 5.5 15 7"/></svg></span>
+              <div><strong>Your own dough</strong><span>Mixed and folded in class, ready to bake in your oven.</span></div>
+            </li>
+            <li>
+              <span class="icon"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="10" rx="9" ry="4"/><path d="M3 10c0 5 4 9 9 9s9-4 9-9"/></svg></span>
+              <div><strong>Mixing bowl, proofing basket and tea towel</strong><span>The same basics used in class.</span></div>
+            </li>
+            <li>
+              <span class="icon"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg></span>
+              <div><strong>The <em>Sourdough Foundations</em> guide</strong><span>A printed booklet with feeding ratios, how to read your starter, baking timelines, FAQs and bonus discard recipes.</span></div>
+            </li>
+          </ul>
+          <p class="kit-note"><strong>The one thing you'll need at home:</strong> a Dutch oven to bake your loaf in. Everything else is supplied.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" aria-labelledby="gallery-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Inside a class</p>
+            <h2 id="gallery-title">Flour on the counter, bread on the table</h2>
+          </div>
+          <p class="lede">Every class includes light appetizers built around sourdough, with loaves baked fresh ahead of time.</p>
+        </div>
+        <div class="gallery">
+          <figure><img src="assets/img/rylee-mixing-450.webp" width="450" height="600" loading="lazy" alt="Rylee mixing dough at the kitchen island"></figure>
+          <figure><img src="assets/img/rylee-welcome-600.webp" width="600" height="450" loading="lazy" alt="Rylee smiling behind a table set with appetizers and a fresh loaf"></figure>
+          <figure><img src="assets/img/crumb-600.webp" width="600" height="600" loading="lazy" alt="The open, airy crumb of a halved sourdough loaf"></figure>
+          <figure><img src="assets/img/class-group-2-675.webp" width="675" height="450" loading="lazy" alt="A small group of students at a class in a bright kitchen"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <img src="assets/img/rylee-portrait-900.webp" srcset="assets/img/rylee-portrait-480.webp 480w, assets/img/rylee-portrait-900.webp 900w" sizes="(max-width: 860px) 360px, 420px" width="900" height="1125" loading="lazy" alt="Rylee in a red apron, smiling behind a class table of fresh sourdough and appetizers">
+        <div>
+          <p class="eyebrow">Meet your teacher</p>
+          <h2 id="about-title">Hi, I'm Rylee.</h2>
+          <p>I'm a wife, mom and self-taught baker. What began as a quiet hobby after my son was born grew into a deep love for homemade bread. Sharing loaves with family and friends led me here: teaching others the simple rhythm of flour, water, salt and time.</p>
+          <p>Sourdough isn't complicated, but it does ask for patience. My classes are small and relaxed, so you can ask every question and feel the dough for yourself.</p>
+          <blockquote>
+            "We won't chase perfection. We'll build rhythm."
+            <footer>Feed your starter. Mix the dough. Rest. Fold. Shape. Bake.</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Student loaves -->
+    <section class="section" aria-labelledby="proof-title">
+      <div class="wrap proof">
+        <div class="proof-photos">
+          <figure>
+            <img src="assets/img/student-loaf-1-442.webp" width="442" height="590" loading="lazy" alt="A dark, crackly sourdough loaf a student baked at home">
+            <figcaption>Baked at home after class</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/student-loaf-2-442.webp" width="442" height="590" loading="lazy" alt="A student holding the cut halves of their sourdough loaf">
+            <figcaption>A student's first crumb shot</figcaption>
+          </figure>
+        </div>
+        <div>
+          <p class="eyebrow">From past students</p>
+          <h2 id="proof-title">Their first loaves, from their own ovens</h2>
+          <p class="lede">The best part of teaching is the photos that come in a few days later. Took a class? Share your bake and leave a review.</p>
+          <a class="btn btn--ghost" href="https://www.facebook.com/profile.php?id=61573125724592&amp;sk=reviews">Read &amp; leave reviews on Facebook</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Private classes -->
+    <section class="section" id="private" aria-labelledby="private-title" style="padding-top: 0">
+      <div class="wrap">
+        <div class="private">
+          <div>
+            <p class="eyebrow">Private classes</p>
+            <h2 id="private-title">Bring a class to your group</h2>
+            <p>Perfect for apartment communities, church groups, birthdays and team outings. Have a clubhouse, community room or church kitchen? I'll come to you with all the gear and supplies. No oven needed.</p>
+            <p class="areas">Serving Clermont, Winter Garden, Windermere, Ocoee, Minneola, Groveland, Mascotte, The Villages and anywhere within about 60 miles.</p>
+          </div>
+          <div class="price-card">
+            <p class="price">$200 <small>base</small></p>
+            <p style="color: var(--muted); margin-top: 6px">+ $75 per person</p>
+            <ul>
+              <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Groups of 3–8 (more on request)</li>
+              <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Bake-at-home kits included</li>
+              <li><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Reply within 24 hours</li>
+            </ul>
+            <a class="btn btn--block" href="https://docs.google.com/forms/d/e/1FAIpQLSfYBBfUP6SKK-DPc8k233DRJyjPu90RRjPOQ7ujXxhpwyw9_A/viewform" target="_blank" rel="noopener">Request a date</a>
           </div>
         </div>
-        <div class="card">
-          <h4>Private Event</h4>
-          <p class="muted">Perfect for apartment communities, church groups, and team offsites.</p>
-          <div class="price">$200 <span class="muted" style="font-size:16px">base</span> + $75<span class="muted" style="font-size:16px">/person</span></div>
-          <ul class="list muted">
-            <li>✔️ Includes bake-at-home kits</li>
-            <li>✔️ Group size: <strong>3–8 people</strong> (more by request)</li>
-            <li>✔️ We bring all gear & supplies</li>
-          </ul>
-          <a class="cta" href="#contact">Request to Host</a>
-        </div>
       </div>
     </section>
 
-    <!-- UPCOMING EVENTS -->
-    <section id="upcoming" class="section">
-      <h3>Upcoming Dates</h3>
-      <div id="events" class="grid grid-3"></div>
-    </section>
-
-    <!-- TESTIMONIALS / SOCIAL PROOF -->
-    <section class="section">
-      <h3>What People Say</h3>
-      <p class="muted">Testimonials coming soon! Check back after our first classes.</p>
-    </section>
-
-    <!-- HOST A CLASS -->
-    <section id="host" class="section">
-      <h3>Host a Class</h3>
-      <div class="grid grid-2">
-        <div class="card">
-          <p class="muted">Have a community room, apartment clubhouse, or church kitchen? We’ll come to you. Tell us about your space and ideal date and we’ll reply within 24 hours.</p>
-          <ul class="list muted">
-            <li>• No oven required</li>
-            <li>• Travel up to 60 miles from Clermont, Winter Garden, Windermere, The Villages, Groveland, Mascotte, Ocoee and more!</li>
-          </ul>
-          <a class="cta" href="#contact">Contact Us</a>
-        </div>
-        <div class="card">
-          <div class="img-wrap">
-            <img src="assets/host.jpg" alt="Private sourdough class" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',innerText:'(Add a photo in assets/host.jpg)'}))">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT / BOOK FORM -->
-    <section id="contact" class="section">
-      <h3>Contact / Book a Class</h3>
-      <div class="grid grid-2">
-        <div class="card">
-          <p class="muted">Use the form to ask about upcoming dates or to plan a private event. We’ll reply within 24 hours.</p>
-          <p class="muted">Prefer email? <a href="mailto:Ryleesbake@gmail.com">Ryleesbake@gmail.com</a></p>
-        </div>
-        <div class="card form-card">
-          <!-- GOOGLE FORMS EMBED (replace the src with your form's embed URL) -->
-          <iframe class="gform-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSfYBBfUP6SKK-DPc8k233DRJyjPu90RRjPOQ7ujXxhpwyw9_A/viewform?embedded=true" height="1200" marginheight="0" marginwidth="0">Loading…</iframe>
-        </div>
+    <!-- FAQ -->
+    <section class="section band" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq">
+        <h2 id="faq-title">Questions</h2>
+        <details open>
+          <summary>Which class should I take?</summary>
+          <p>If you're new to sourdough, start with Sourdough 101. Sourdough 201 is for anyone who has taken 101 or already knows how to feed and maintain a starter.</p>
+        </details>
+        <details>
+          <summary>Do I need any baking experience?</summary>
+          <p>Not for 101. It's built for complete beginners, and we go step by step.</p>
+        </details>
+        <details>
+          <summary>What should I bring?</summary>
+          <p>For 101, just yourself. We supply everything except a Dutch oven, which you'll need at home to bake your dough after class. For 201, bring your Sourdough 101 kit and your starter, or the equivalent supplies if you have your own setup.</p>
+        </details>
+        <details>
+          <summary>Where are classes held?</summary>
+          <p>In Clermont, FL. You'll see the address on your confirmation page right after booking. Before class, I'll send a text to confirm you're coming and explain how to get into the neighborhood without any trouble.</p>
+        </details>
+        <details>
+          <summary>Is food included?</summary>
+          <p>Yes. Every class includes light appetizers centered around sourdough, with fresh bread baked ahead of time.</p>
+        </details>
+        <details>
+          <summary>What if I can't make it?</summary>
+          <p>Classes are non-refundable. If something comes up and you can't make it, please reach out as soon as possible at <a href="mailto:ryleesbake@gmail.com">ryleesbake@gmail.com</a>.</p>
+        </details>
       </div>
     </section>
 
   </main>
 
-  <footer class="footer">
-    <p>© <span id="year"></span> Rylee's Bake • Serving Clermont, Winter Garden, Windermere, The Villages, Groveland, Mascotte, Ocoee and more! • <a href="#">Instagram</a></p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <img src="assets/img/logo-192.png" width="96" height="96" alt="Rylee's Bake, home baked goods">
+        <p>Hands-on sourdough classes in Clermont, FL and the surrounding area.</p>
+      </div>
+      <div>
+        <h2>Get in touch</h2>
+        <ul>
+          <li><a href="mailto:ryleesbake@gmail.com">ryleesbake@gmail.com</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61573125724592">Facebook</a></li>
+          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfYBBfUP6SKK-DPc8k233DRJyjPu90RRjPOQ7ujXxhpwyw9_A/viewform" target="_blank" rel="noopener">Request a private class</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Classes</h2>
+        <ul>
+          <li><a href="#classes">Upcoming dates</a></li>
+          <li><a href="#which-class">Sourdough 101 &amp; 201</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <p class="legal"><span>© <span data-year>2026</span> Rylee's Bake</span><span>Good bread takes time, and so do we.</span></p>
+    </div>
   </footer>
 
-<script>
-  // Upcoming events
-  const events = [
-    {
-      type: "Hands-On Sourdough 101",
-      date: "July 11, 2026",
-      time: "11:30 AM – 2:00 PM",
-      where: "Clermont area",
-      price: "$80/person",
-      url: "https://square.link/u/ZvKRgPqT"
-    },
-    {
-      type: "Hands-On Sourdough 101",
-      date: "August 22, 2026",
-      time: "11:30 AM – 2:00 PM",
-      where: "Clermont area",
-      price: "$100/person",
-      url: "https://square.link/u/61ym8UGY"
-    },
-    {
-      type: "Hands-On Sourdough 101",
-      date: "October 3, 2026",
-      time: "11:30 AM – 2:00 PM",
-      where: "Clermont area",
-      price: "$100/person",
-      url: "https://square.link/u/X8pFbBka"
-    },
-    {
-      type: "Hands-On Sourdough 201",
-      date: "November 14th, 2026",
-      time: "11:30 AM – 1:00 PM",
-      where: "Clermont area",
-      price: "$80/person",
-      url: "https://square.link/u/RKozbW85"
-    },
-  ];
-
-  const wrap = document.getElementById('events');
-
-  if (!wrap) {
-    console.warn("Missing #events container in the DOM.");
-  } else if (events.length === 0) {
-    wrap.innerHTML = `
-      <div class="card">
-        <strong>To Be Announced</strong>
-        <div class="muted">Join the email list or check back soon.</div>
-      </div>
-    `;
-  } else {
-    wrap.innerHTML = events.map(e => `
-      <div class="card">
-        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
-          <div>
-            <strong>${e.type}</strong>
-            <div class="muted">${e.date} • ${e.time}</div>
-            <div class="muted">${e.where}</div>
-          </div>
-          <div style="text-align:right">
-            <div class="price" style="font-size:28px">
-              ${e.price}
-            </div>
-            <a class="cta" href="${e.url}" target="_blank" rel="noopener">Sign Up</a>
-          </div>
-        </div>
-      </div>
-    `).join('');
-  }
-
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+  <script src="assets/js/classes.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

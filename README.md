@@ -1,218 +1,40 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sourdough Starter Classes | Rylee's Bake</title>
-  <meta name="description" content="Hands-on sourdough classes with all the gear, printables, and a step-by-step method. Learn to bake crusty loaves at home and host a class at your venue." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{ --bg:#faf7f2; --ink:#1f2937; --muted:#6b7280; --accent:#8b5e34; --accent-2:#c59b76; --card:#fff; --ring:#e7e0d7; }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1080px;margin:0 auto;padding:24px}
-    header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px);background:color-mix(in oklab, var(--bg) 90%, white);border-bottom:1px solid var(--ring);z-index:20}
-    .nav{display:flex;align-items:center;gap:16px;justify-content:space-between;padding:14px 24px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo-box{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:conic-gradient(from 0.25turn, var(--accent), var(--accent-2));box-shadow:0 6px 20px rgba(0,0,0,.05);overflow:hidden}
-    .logo-img{width:40px;height:40px;object-fit:cover;border-radius:10px;border:1px solid var(--ring)}
-    .brand h1{font-family:"Playfair Display",serif;font-size:20px;margin:0}
-    .cta{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:white;border:none;border-radius:999px;padding:10px 16px;font-weight:700;box-shadow:0 8px 20px rgba(139,94,52,.25);}
-    .cta:hover{filter:brightness(1.05)}
-    .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center;padding:48px 24px}
-    .hero h2{font-family:"Playfair Display",serif;font-size:clamp(36px,5vw,56px);line-height:1.05;margin:0 0 8px}
-    .hero p{font-size:18px;color:var(--muted);margin:0 0 16px}
-    .pill{display:inline-block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:#f5ede4;border:1px solid var(--ring);padding:8px 12px;border-radius:999px}
-    .card{background:var(--card);border:1px solid var(--ring);border-radius:16px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.05)}
-    .grid{display:grid;gap:16px}
-    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .list{display:grid;gap:10px;margin:0;padding:0}
-    .list li{list-style:none;display:flex;gap:10px}
-    .badge{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:7px;background:var(--accent);color:white;font-weight:700}
-    .section{padding:24px}
-    .section h3{font-family:"Playfair Display",serif;font-size:28px;margin:0 0 12px}
-    .price{font-size:40px;font-weight:800}
-    .muted{color:var(--muted)}
-    .footer{padding:40px 24px;border-top:1px solid var(--ring);text-align:center;color:var(--muted)}
-    .img-wrap{aspect-ratio:4/3;border-radius:16px;overflow:hidden;border:1px solid var(--ring);background:linear-gradient(135deg, #f2ebe2, #fff)}
-    .img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
-    .img-wrap .ph{display:grid;place-items:center;height:100%;color:var(--muted)}
-    .note{font-size:12px;color:var(--muted)}
-    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}}
-      .form-card{padding:0; overflow:hidden}
-    .form-card iframe{display:block; width:100%; border:0}
-    :root{ --gform-h-desktop: 1200px; --gform-h-mobile: 1500px }
-    @media (max-width:900px){
-      .gform-frame{height:var(--gform-h-mobile) !important}
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="nav container">
-      <div class="brand">
-        <div class="logo-box">
-          <img src="assets/logo.png" alt="Rylee's Bake logo" class="logo-img" onerror="this.style.display='none'">
-        </div>
-        <h1>Rylee's Bake</h1>
-      </div>
-      <a class="cta" href="#contact">Book a Class</a>
-    </div>
-  </header>
+# Rylee's Bake
 
-  <main class="container">
-    <!-- HERO -->
-    <section class="hero">
-      <div>
-        <span class="pill">Hands-on • Beginner-friendly • Everything included</span>
-        <h2>Learn to Bake Incredible Sourdough in One Class</h2>
-        <p>Small-group classes where you leave with an active starter, step-by-step printables, and confidence to bake at home. We bring all the gear — you bring your curiosity.</p>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
-          <a class="cta" href="#book">See Dates & Pricing</a>
-          <a class="cta" style="background:#1f2937" href="#contact">Host a Class</a>
-        </div>
-      </div>
-      <div class="img-wrap card">
-        <img src="assets/hero.jpg" alt="Sourdough class in action" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',innerText:'(Add a hero photo in assets/hero.jpg)'}))">
-      </div>
-    </section>
+Website for Rylee's Bake, hands-on sourdough classes in Clermont, FL.
 
-    <!-- WHAT YOU'LL GET -->
-    <section class="section">
-      <h3>What You’ll Get</h3>
-      <div class="grid grid-3">
-        <div class="card">
-          <div class="badge">1</div>
-          <h4>Live Teaching</h4>
-          <p class="muted">Step-by-step method: feeding, bulk, shaping, scoring, baking. Q&A throughout.</p>
-        </div>
-        <div class="card">
-          <div class="badge">2</div>
-          <h4>Starter & Kit</h4>
-          <p class="muted">Active starter + basic tools to get baking tonight (bowl scraper, lame/razor, proofing guide).</p>
-        </div>
-        <div class="card">
-          <div class="badge">3</div>
-          <h4>Printables</h4>
-          <p class="muted">Beautifully designed recipe cards, maintenance schedule, and troubleshooting flowchart.</p>
-        </div>
-      </div>
-    </section>
+A fast, dependency-free static site: plain HTML, CSS and JavaScript, self-hosted fonts and compressed WebP photos. Hosted on GitHub Pages.
 
-    <!-- PRICING -->
-    <section id="book" class="section">
-      <h3>Classes & Pricing</h3>
-      <div class="grid grid-2">
-        <div class="card">
-          <h4>Hands-On Sourdough 101</h4>
-          <p class="muted">2.5 hours • beginner friendly • includes starter & kit</p>
-          <div class="price">$<span id="price-101">100</span><span class="muted" style="font-size:16px">/person</span></div>
-          <ul class="list muted">
-            <li>✔️ All equipment provided</li>
-            <li>✔️ Take-home starter + resources</li>
-            <li>✔️ Class size: <strong>3–6 people</strong></li>
-          </ul>
-          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
-            <a class="cta" href="#upcoming">View Upcoming Dates</a>
-            <a class="cta" href="#contact">Book a Private Group</a>
-          </div>
-        </div>
-        <div class="card">
-          <h4>Private Event</h4>
-          <p class="muted">Perfect for apartment communities, church groups, and team offsites.</p>
-          <div class="price">$200 <span class="muted" style="font-size:16px">base</span> + $75<span class="muted" style="font-size:16px">/person</span></div>
-          <ul class="list muted">
-            <li>✔️ Includes bake-at-home kits</li>
-            <li>✔️ Group size: <strong>3–8 people</strong> (more by request)</li>
-            <li>✔️ We bring all gear & supplies</li>
-          </ul>
-          <a class="cta" href="#contact">Request to Host</a>
-        </div>
-      </div>
-    </section>
+## Pages
 
-    <!-- UPCOMING EVENTS -->
-    <section id="upcoming" class="section">
-      <h3>Upcoming Dates</h3>
-      <div id="events" class="grid grid-3"></div>
-    </section>
+| File | What it is |
+| --- | --- |
+| `index.html` | Home page: upcoming dates, Sourdough 101 & 201, starter kit, about, private classes, FAQ |
+| `booked.html` | Confirmation page Square sends customers to after paying. Shows the date, address, what to bring, and calendar and directions buttons. Hidden from search engines. |
+| `404.html` | Not-found page |
 
-    <!-- TESTIMONIALS / SOCIAL PROOF -->
-    <section class="section">
-      <h3>What People Say</h3>
-      <p class="muted">Testimonials coming soon! Check back after our first classes.</p>
-    </section>
+## Updating class dates
 
-    <!-- HOST A CLASS -->
-    <section id="host" class="section">
-      <h3>Host a Class</h3>
-      <div class="grid grid-2">
-        <div class="card">
-          <p class="muted">Have a community room, apartment clubhouse, or church kitchen? We’ll come to you. Tell us about your space and ideal date and we’ll reply within 24 hours.</p>
-          <ul class="list muted">
-            <li>• No oven required</li>
-            <li>• Travel up to 60 miles from Clermont, Winter Garden, Windermere, The Villages, Groveland, Mascotte, Ocoee and more!</li>
-          </ul>
-          <a class="cta" href="#contact">Contact Us</a>
-        </div>
-        <div class="card">
-          <div class="img-wrap">
-            <img src="assets/host.jpg" alt="Private sourdough class" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',innerText:'(Add a photo in assets/host.jpg)'}))">
-          </div>
-        </div>
-      </div>
-    </section>
+Everything about the schedule lives in **`assets/js/classes.js`**. Nothing else needs editing.
 
-    <!-- CONTACT / BOOK FORM -->
-    <section id="contact" class="section">
-      <h3>Contact / Book a Class</h3>
-      <div class="grid grid-2">
-        <div class="card">
-          <p class="muted">Use the form to ask about upcoming dates or to plan a private event. We’ll reply within 24 hours.</p>
-          <p class="muted">Prefer email? <a href="mailto:Ryleesbake@gmail.com">Ryleesbake@gmail.com</a></p>
-        </div>
-        <div class="card form-card">
-          <!-- GOOGLE FORMS EMBED (replace the src with your form's embed URL) -->
-          <iframe class="gform-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSfYBBfUP6SKK-DPc8k233DRJyjPu90RRjPOQ7ujXxhpwyw9_A/viewform?embedded=true" height="1200" marginheight="0" marginwidth="0">Loading…</iframe>
-        </div>
-      </div>
-    </section>
+- **Add a date:** copy an entry in `RB_CLASSES`, change `id` (the date as `YYYY-MM-DD`), `type` (`"101"` or `"201"`), `capacity`, `spotsLeft` and `checkout` (the Square link).
+- **After a booking:** lower `spotsLeft`. At `0` the card switches to "Sold out" with a waitlist button.
+- **Change a price:** edit `price` under `RB_CLASS_TYPES`. To set a one-off price for a single date, add `price` to that date's entry.
+- **Old dates** hide themselves once the class has ended.
 
-  </main>
+Each date also appears in Google search results as an event, generated from the same list.
 
-  <footer class="footer">
-    <p>© <span id="year"></span> Rylee's Bake • Serving Clermont, Winter Garden, Windermere, The Villages, Groveland, Mascotte, Ocoee and more! • <a href="#">Instagram</a></p>
-  </footer>
+## Square setup
 
-  <script>
-    // Upcoming events: show TBA only (edit later when you have real dates)
-    const events = [];
-    const wrap = document.getElementById('events');
-    if(events.length === 0){
-      wrap.innerHTML = `<div class="card"><strong>To Be Announced</strong><div class="muted">Join the email list or check back soon.</div></div>`;
-    } else {
-      wrap.innerHTML = events.map(e => `
-        <div class="card">
-          <div style=\"display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap\">
-            <div>
-              <strong>${e.type}</strong>
-              <div class=\"muted\">${e.date} • ${e.time}</div>
-              <div class=\"muted\">${e.where}</div>
-            </div>
-            <div style=\"text-align:right\">
-             <div class="price" style="font-size:28px">
-  ${e.price}
-</div>
-          </div>
-        </div>`).join('');
-    }
+Each Square checkout link should be a **Collect a payment** link with **Redirect to a website after checkout** turned on, pointing at:
 
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+```
+https://YOUR-DOMAIN/booked.html?class=YYYY-MM-DD
+```
+
+The `class` value is the date's `id` in `classes.js`. It tells the confirmation page which class was booked.
+
+## Assets
+
+- `assets/img/` contains photos as WebP in the sizes the page uses, plus the logo.
+- `assets/fonts/` holds Cormorant Garamond and DM Sans (SIL Open Font License).
+- `og-image.jpg` is the preview image shown when the link is shared.
