@@ -2,7 +2,7 @@
 
 Website for Rylee's Bake, hands-on sourdough classes in Clermont, FL.
 
-A fast, dependency-free static site: plain HTML, CSS and JavaScript, self-hosted fonts and compressed WebP photos. Hosted on GitHub Pages.
+A fast, dependency-free static site: plain HTML, CSS and JavaScript, self-hosted fonts and compressed WebP photos. Hosted on GitHub Pages at [ryleesbake.com](https://ryleesbake.com).
 
 ## Pages
 
@@ -28,7 +28,7 @@ Each date also appears in Google search results as an event, generated from the 
 Each Square checkout link should be a **Collect a payment** link with **Redirect to a website after checkout** turned on, pointing at:
 
 ```
-https://YOUR-DOMAIN/booked.html?class=YYYY-MM-DD
+https://ryleesbake.com/booked.html?class=YYYY-MM-DD
 ```
 
 The `class` value is the date's `id` in `classes.js`. It tells the confirmation page which class was booked.

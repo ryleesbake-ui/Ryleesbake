@@ -7,7 +7,7 @@
 
    Date fields:
    id         The class date as YYYY-MM-DD. Also used in the Square
-              redirect link: https://YOUR-DOMAIN/booked.html?class=<id>
+              redirect link: https://ryleesbake.com/booked.html?class=<id>
    type       "101" or "201" (must match a key in RB_CLASS_TYPES).
    start/end  24-hour time, Eastern.
    price      Optional. Leave out to use the class type's price.
